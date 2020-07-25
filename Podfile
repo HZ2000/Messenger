@@ -16,8 +16,15 @@ target 'Messenger' do
     # Pods for testing
   end
 
+# Firebase
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+
+# Facebook 
+pod 'FBSDKLoginKit'
+
+# Google Sign In
+pod 'GoogleSignIn'
 
 end
