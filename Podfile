@@ -20,12 +20,15 @@ target 'Messenger' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Firebase/Storage'
 
 # Facebook 
 pod 'FBSDKLoginKit'
 
 # Google Sign In
 pod 'GoogleSignIn'
+
+
 
 pod 'MessageKit'
 pod 'JGProgressHUD'
