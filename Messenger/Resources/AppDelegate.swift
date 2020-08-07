@@ -68,6 +68,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
         }
         
         UserDefaults.standard.set(email, forKey: "email")
+        UserDefaults.standard.set("\(firstName) \(lastName)", forKey: "name")
+
 
         DatabaseManager.shared.userExists(with: email) { (exists) in
             
