@@ -50,7 +50,7 @@ class NewConversationViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         searchbar.delegate = self
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         navigationController?.navigationBar.topItem?.titleView = searchbar
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(dismissSelf))
         searchbar.becomeFirstResponder()

@@ -16,6 +16,7 @@
 		E554EC5F24D06452005A1BAD /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554EC5E24D06452005A1BAD /* StorageManager.swift */; };
 		E590C3F424CA106400310D6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E590C3F324CA106400310D6E /* GoogleService-Info.plist */; };
 		E590C3F624CA1DDB00310D6E /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590C3F524CA1DDB00310D6E /* DatabaseManager.swift */; };
+		E5950B3024EA8746007528ED /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5950B2F24EA8746007528ED /* LocationPickerViewController.swift */; };
 		E5955A3624C6FF6600933185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5955A3524C6FF6600933185 /* AppDelegate.swift */; };
 		E5955A3824C6FF6600933185 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5955A3724C6FF6600933185 /* SceneDelegate.swift */; };
 		E5955A3A24C6FF6600933185 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5955A3924C6FF6600933185 /* ConversationsViewController.swift */; };
@@ -64,6 +65,7 @@
 		E554EC5E24D06452005A1BAD /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		E590C3F324CA106400310D6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E590C3F524CA1DDB00310D6E /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		E5950B2F24EA8746007528ED /* LocationPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
 		E5955A3224C6FF6600933185 /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5955A3524C6FF6600933185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5955A3724C6FF6600933185 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				E5955A7324C7036000933185 /* NewConversationViewController.swift */,
 				E5955A7524C7037400933185 /* ProfileViewController.swift */,
 				E554EC5C24CF03FF005A1BAD /* ChatViewController.swift */,
+				E5950B2F24EA8746007528ED /* LocationPickerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				E5955A3024C6FF6600933185 /* Resources */,
 				73419EA12FB3471C5AE55CDC /* [CP] Embed Pods Frameworks */,
 				240F0B8DCD20337B414A4C72 /* [CP] Copy Pods Resources */,
+				E5950B3124EADF29007528ED /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -532,6 +536,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E5950B3124EADF29007528ED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -554,6 +575,7 @@
 				E554EC5D24CF03FF005A1BAD /* ChatViewController.swift in Sources */,
 				E5955A7024C7032600933185 /* PhotoViewerViewController.swift in Sources */,
 				E554EC5F24D06452005A1BAD /* StorageManager.swift in Sources */,
+				E5950B3024EA8746007528ED /* LocationPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
