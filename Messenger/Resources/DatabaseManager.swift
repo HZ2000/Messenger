@@ -11,12 +11,14 @@ import FirebaseDatabase
 import MessageKit
 import CoreLocation
 
+/// Manager object to read and write data to real time firebase database
 final class DatabaseManager {
     
-    static let shared = DatabaseManager()
+    /// Shared instance of class
+    public static let shared = DatabaseManager()
     
     private let database = Database.database().reference()
-    
+        
     static func safeEmail(emailAddress: String) -> String {
         var safeEmail = emailAddress.replacingOccurrences(of: ".", with: "-")
         safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
@@ -26,8 +28,9 @@ final class DatabaseManager {
 
 extension DatabaseManager {
     
+    ///Returns dictionary node at child path
     public func getDataForPath(path: String , completion: @escaping (Result<Any , Error>) -> Void ) {
-        self.database.child("\(path)").observeSingleEvent(of: .value) { (snapshot) in
+        database.child("\(path)").observeSingleEvent(of: .value) { (snapshot) in
             guard let value = snapshot.value else {
                 completion(.failure(DatabaseError.failedToFetch))
                 return
@@ -41,6 +44,10 @@ extension DatabaseManager {
 // MARK: - Account Managment
 extension DatabaseManager {
     
+    /// Checks if user exists for given email
+    /// Parameters
+    /// - `email ` :         Target email to be checked
+    /// - completion:         Async closure to return with result
     public func userExists(with email: String,
                            completion: @escaping ((Bool) -> Void)) {
         
@@ -61,14 +68,19 @@ extension DatabaseManager {
         database.child(user.safeEmail).setValue([
             "first_name": user.firstName,
             "last_name": user.lastName
-            ] , withCompletionBlock: { error , _ in
+            ] , withCompletionBlock: {[weak self] error , _ in
+                
+                guard let strongSelf = self else {
+                    return
+                }
+                
                 guard error == nil else {
                     print("Failed to write to database")
                     completion(false)
                     return
                 }
                 
-                self.database.child("users").observeSingleEvent(of: .value) { (snapshot) in
+                strongSelf.database.child("users").observeSingleEvent(of: .value) { (snapshot) in
                     
                     if var usersCollection = snapshot.value as? [[String : String]] {
                         //Append to user dictionary
@@ -78,7 +90,7 @@ extension DatabaseManager {
                         ]
                         usersCollection.append(newElement)
                         
-                        self.database.child("users").setValue(usersCollection , withCompletionBlock: { error , _ in
+                        strongSelf.database.child("users").setValue(usersCollection , withCompletionBlock: { error , _ in
                             guard error == nil else {
                                 completion(false)
                                 return
@@ -97,7 +109,7 @@ extension DatabaseManager {
                             ]
                         ]
                         
-                        self.database.child("users").setValue(newCollection , withCompletionBlock: { error , _ in
+                        strongSelf.database.child("users").setValue(newCollection , withCompletionBlock: { error , _ in
                             guard error == nil else {
                                 completion(false)
                                 return
@@ -111,6 +123,7 @@ extension DatabaseManager {
         })
     }
     
+    /// Gets all users from database
     public func getAllUsers(completion: @escaping (Result<[[String: String]], Error>) -> Void ) {
         database.child("users").observeSingleEvent(of: .value) { (snapshot) in
             
@@ -125,6 +138,13 @@ extension DatabaseManager {
     
     public enum DatabaseError: Error {
         case failedToFetch
+        
+        public var localizedDescription: String {
+            switch self {
+            case .failedToFetch:
+                return "..."
+            }
+        }
     }
     
 }

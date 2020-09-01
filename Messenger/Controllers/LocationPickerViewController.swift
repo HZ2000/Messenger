@@ -10,11 +10,11 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class LocationPickerViewController: UIViewController {
+final class LocationPickerViewController: UIViewController {
     
     public var completion : ((CLLocationCoordinate2D) -> Void)?
     private var coordinates: CLLocationCoordinate2D?
-    private var isPickable = true
+    public var isPickable = true
     private let map: MKMapView = {
         let map = MKMapView()
         return map

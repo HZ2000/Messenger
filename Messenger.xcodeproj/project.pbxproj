@@ -14,6 +14,10 @@
 		E5190AD924DC0FCE0029941B /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5190AD824DC0FCE0029941B /* ConversationTableViewCell.swift */; };
 		E554EC5D24CF03FF005A1BAD /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554EC5C24CF03FF005A1BAD /* ChatViewController.swift */; };
 		E554EC5F24D06452005A1BAD /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554EC5E24D06452005A1BAD /* StorageManager.swift */; };
+		E5744AB324FEC00F00B9EB6A /* ConversationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5744AB224FEC00F00B9EB6A /* ConversationModels.swift */; };
+		E5744AB524FEC04300B9EB6A /* ChatModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5744AB424FEC04300B9EB6A /* ChatModels.swift */; };
+		E5744AB724FEC09100B9EB6A /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5744AB624FEC09100B9EB6A /* SearchResult.swift */; };
+		E5744AB924FEC0ED00B9EB6A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5744AB824FEC0ED00B9EB6A /* ProfileViewModel.swift */; };
 		E590C3F424CA106400310D6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E590C3F324CA106400310D6E /* GoogleService-Info.plist */; };
 		E590C3F624CA1DDB00310D6E /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590C3F524CA1DDB00310D6E /* DatabaseManager.swift */; };
 		E5950B3024EA8746007528ED /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5950B2F24EA8746007528ED /* LocationPickerViewController.swift */; };
@@ -28,7 +32,6 @@
 		E5955A6C24C702F600933185 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5955A6B24C702F600933185 /* LoginViewController.swift */; };
 		E5955A6E24C7030900933185 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5955A6D24C7030900933185 /* RegisterViewController.swift */; };
 		E5955A7024C7032600933185 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5955A6F24C7032600933185 /* PhotoViewerViewController.swift */; };
-		E5955A7224C7033700933185 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5955A7124C7033700933185 /* VideoPlayerViewController.swift */; };
 		E5955A7424C7036000933185 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5955A7324C7036000933185 /* NewConversationViewController.swift */; };
 		E5955A7624C7037400933185 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5955A7524C7037400933185 /* ProfileViewController.swift */; };
 		E5955A7924C75B2F00933185 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5955A7824C75B2F00933185 /* Extensions.swift */; };
@@ -63,6 +66,10 @@
 		E5190AD824DC0FCE0029941B /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		E554EC5C24CF03FF005A1BAD /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E554EC5E24D06452005A1BAD /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		E5744AB224FEC00F00B9EB6A /* ConversationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationModels.swift; sourceTree = "<group>"; };
+		E5744AB424FEC04300B9EB6A /* ChatModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModels.swift; sourceTree = "<group>"; };
+		E5744AB624FEC09100B9EB6A /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		E5744AB824FEC0ED00B9EB6A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		E590C3F324CA106400310D6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E590C3F524CA1DDB00310D6E /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		E5950B2F24EA8746007528ED /* LocationPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +90,6 @@
 		E5955A6B24C702F600933185 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E5955A6D24C7030900933185 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E5955A6F24C7032600933185 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
-		E5955A7124C7033700933185 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		E5955A7324C7036000933185 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		E5955A7524C7037400933185 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E5955A7824C75B2F00933185 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -202,7 +208,6 @@
 				E5955A3924C6FF6600933185 /* ConversationsViewController.swift */,
 				E5955A7724C7047600933185 /* Login */,
 				E5955A6F24C7032600933185 /* PhotoViewerViewController.swift */,
-				E5955A7124C7033700933185 /* VideoPlayerViewController.swift */,
 				E5955A7324C7036000933185 /* NewConversationViewController.swift */,
 				E5955A7524C7037400933185 /* ProfileViewController.swift */,
 				E554EC5C24CF03FF005A1BAD /* ChatViewController.swift */,
@@ -225,6 +230,10 @@
 		E5955A6724C7018100933185 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E5744AB224FEC00F00B9EB6A /* ConversationModels.swift */,
+				E5744AB424FEC04300B9EB6A /* ChatModels.swift */,
+				E5744AB624FEC09100B9EB6A /* SearchResult.swift */,
+				E5744AB824FEC0ED00B9EB6A /* ProfileViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -561,18 +570,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5955A6C24C702F600933185 /* LoginViewController.swift in Sources */,
+				E5744AB924FEC0ED00B9EB6A /* ProfileViewModel.swift in Sources */,
 				E50B71A624E13D6F00DC0834 /* NewConversationCell.swift in Sources */,
 				E590C3F624CA1DDB00310D6E /* DatabaseManager.swift in Sources */,
+				E5744AB524FEC04300B9EB6A /* ChatModels.swift in Sources */,
 				E5955A6E24C7030900933185 /* RegisterViewController.swift in Sources */,
 				E5955A7424C7036000933185 /* NewConversationViewController.swift in Sources */,
 				E5955A3A24C6FF6600933185 /* ConversationsViewController.swift in Sources */,
-				E5955A7224C7033700933185 /* VideoPlayerViewController.swift in Sources */,
 				E5955A7924C75B2F00933185 /* Extensions.swift in Sources */,
+				E5744AB724FEC09100B9EB6A /* SearchResult.swift in Sources */,
 				E5955A3624C6FF6600933185 /* AppDelegate.swift in Sources */,
 				E5955A7624C7037400933185 /* ProfileViewController.swift in Sources */,
 				E5955A3824C6FF6600933185 /* SceneDelegate.swift in Sources */,
 				E5190AD924DC0FCE0029941B /* ConversationTableViewCell.swift in Sources */,
 				E554EC5D24CF03FF005A1BAD /* ChatViewController.swift in Sources */,
+				E5744AB324FEC00F00B9EB6A /* ConversationModels.swift in Sources */,
 				E5955A7024C7032600933185 /* PhotoViewerViewController.swift in Sources */,
 				E554EC5F24D06452005A1BAD /* StorageManager.swift in Sources */,
 				E5950B3024EA8746007528ED /* LocationPickerViewController.swift in Sources */,
